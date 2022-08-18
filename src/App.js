@@ -11,9 +11,9 @@ function App() {
         <div className="container pt-4">
             <Routes>
                     <Route path="/tasks" element={<Tasks/>} />
-                    <Route path="/tasks/" element={<Tasks/>} />
+                    <Route path="/tasks/:id" element={<Task/>} />
                     <Route path="/about" element={<About/>} />
-                    <Route path="*" element={<NotFound/>} />
+
             </Routes>
         </div>
   );

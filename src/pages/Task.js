@@ -9,13 +9,13 @@ export const Task = () => {
     const [Messages, setMessages] = useState([]);
     const url = process.env.REACT_APP_REST_URL;
     useEffect(() => {
-        axios.get(url+"tasks/?id="+params).then((resp) => {
+        axios.get(url+"tasks/?id="+params.id).then((resp) => {
             setTask(resp.data);
             console.log("log",resp.data)
         });
     }, [setTask],[]);
     useEffect(() => {
-        axios.get(url+"messages/?task="+params).then((resp) => {
+        axios.get(url+"messages/?task="+params.id).then((resp) => {
             setMessages(resp.data);
             console.log(resp.data)
         });
